@@ -1,0 +1,22 @@
+name: ci-app-deploy
+
+on: push
+  jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node-version: ['18']
+        npm-version: ['6.x']
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: make setup
+      - run: make test
+      - run: make lint
