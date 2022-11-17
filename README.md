@@ -1,4 +1,4 @@
-[![ci-app-deploy](https://github.com/LizaGin/hexlet-ci-app/actions/workflows/ci-app-delpoy.yml/badge.svg)](https://github.com/LizaGin/hexlet-ci-app/actions/workflows/ci-app-delpoy.yml)
+![ci-app-deploy workflow](https://github.com/LizaGin/hexlet-ci-app/actions/workflows/ci-app-deploy.yml/badge.svg)
 
 # Example app for CI Hexlet course
 
